@@ -245,7 +245,84 @@ header {
   top: 0;
   right: 0;
   width: 100%;
-  height: 50%;
+  height: 60%;
   background-size: cover;
   background: url('imgs/topsvg.svg') no-repeat center top; /* Path to your wave SVG */
+}
+
+
+
+/* activites */
+
+.activities-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.section-title {
+  font-family: "ADLaM Display", system-ui;
+  font-size: 35px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.activities-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+.activity-card {
+  background-color: #E5E7EB;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.046);
+  overflow: hidden;
+  width: 220px;
+  height: 298.88px;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #656565;
+  margin: 0;
+}
+
+.more-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #656565;
+  margin-top: 40px;
 }
