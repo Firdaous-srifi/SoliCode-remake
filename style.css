@@ -5,5 +5,120 @@
     --dark-gray: #444444; 
     --black: #000000; /* Black color */
     --white: #FFFFFF; /* White color */
-    --font-family: 'ADLaM', sans-serif; 
+    --font-family: 'ADLaM Display', sans-serif; 
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .container{
+    padding-inline: 40px;
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+} */
+/*HEADER*/
+
+/*INFOS*/
+.infos{
+    background-color: var(--white); /* Background color from the image */
+    padding: 150px; /* Adjust padding as needed */
+}
+
+.infos-title{
+    font-family: var(--font-family);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--black); /* Title color from the image */
+}
+
+.container .infos {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.infos-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.infos-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  /* opacity: 0.7; */
+  
+}
+
+.infos-card {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  /* width: 80%; */
+  max-width: 950px;
+  
+  
+}
+
+
+/*EXPERIENCE*/
+.container-experience{
+    background-color: var(--blue-color);
+}
+
+.experience-title h2{
+    font-family: var(--font-family);
+    text-align: center;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 40px;
+    color: var(--white);
+}
+.experience-content{
+    align-items: left;
+}
+.experience-content img{
+    width: 100%;
+    height: 100%;
+    padding: 150px; 
+    max-width: 65%;
+    margin: 0 auto 30px;
+    border-radius: 80px;
+    object-fit: cover;
+}
+.experience-content h3 ul li {
+    text-decoration-color: var(--white);
+    text-align: left;
+    /* padding: 150px; */
+    float: right;
+}
+.experience-content h3 {
+
+}
+
+.experience-content ul {
+
+}
+.experience-content li {
+    margin-bottom: 15px;
+}
+/*PROGRAMMES*/
+
+/*ABOUT*/
+
+/*ACTIVITES*/
+
+/*FOOTER*/
