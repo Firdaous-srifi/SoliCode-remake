@@ -8,10 +8,12 @@
     --dark-gray: #444444; 
     --black: #000000; /* Black color */
     --white: #FFFFFF; /* White color */
-    --font-family: 'ADLaM', sans-serif; 
+    --font-family: 'ADLaM', sans-serif;
+    --font-family2: "Inter", sans-serif;
 }
 
 *{
+  max-width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +22,7 @@
 /* header and hero section */
 
 header {
-    position: absolute; 
+    position:  fixed; 
     z-index: 10;  
     font-family: var(--font-family);
     display: flex;               
@@ -40,7 +42,7 @@ header {
 
 .logo-solicode {
     max-height: 60px;
-    margin-left: -18%;            
+    margin-left: -13%;            
 }
 
 .icons-section ul {
@@ -67,7 +69,14 @@ header {
     color: var(--white);                 
     border: none;                
     border-radius: 20px;          
-    cursor: pointer;             
+    cursor: pointer; 
+    transition: all ease-in 0.3s;           
+}
+
+#Subscription-btn:hover {
+  transition-duration: 0.5s;
+  background-color: var(--white);
+  color: var(--yellow-color);
 }
 
 
@@ -325,4 +334,152 @@ header {
   font-weight: 300;
   color: #656565;
   margin-top: 40px;
+}
+
+
+/* footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  
+}
+
+.footer-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between; /* This keeps items spaced apart */
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  width: 100%; 
+}
+
+
+.logo {
+  height: 50px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-menu li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  align-items: flex-end;
+  
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-middle {
+  margin: 20px 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+#middle-paraghraph{ 
+  line-height: 21px;
+  margin-left: 5%;
+  font-weight: 300;
+  font-family: var(--font-family2);
+}
+
+.footer-middle address {
+  font-style: var(--font-family2);
+  margin: 30px 0;
+  margin-left: 5%;
+  line-height: 20px;
+}
+
+.adress-left {
+  font-style: var(--font-family2);
+  font-weight: 100;
+  font-size: 13px;
+}
+
+.adress-left span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.addres-right {
+  font-size: 13px;
+  margin-left: 35%;
+  margin-top: -3.4%;
+}
+
+.addres-right span {
+  font-weight: 100;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact-button {
+  background-color: #ffc107;
+  color: #000;
+  padding: 10px 90px;
+  text-decoration: none;
+  border-radius: 13px;
+  font-weight: 700;
+  margin-left: 5%;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.contact-button:hover {
+  background-color: #ff9f00;
+}
+
+.footer-bottom {
+  margin: 20px 0;
+}
+
+iframe {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+  width: 72%;
+  height: 336px;
+  margin-left: 5%;
+  margin-top: -2%;
+}
+
+.women-pic {
+  width: 14%;
+  margin-bottom: -28%; /* Adjust the width as necessary */
+  margin-left: 70%; /* This will push the image to the right */
+}
+
+.footer-copyright {
+  background-color: #ffc107;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 14px;
+  margin-bottom: -30%;
 }
