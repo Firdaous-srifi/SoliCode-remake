@@ -36,9 +36,9 @@ header {
     justify-content: space-between;
     align-items: center;         
     padding: 10px 20px;
-    width: 80%;        
+    width: 90%;        
     background-color: var(--blue-color);
-    margin-left: 9%;
+    margin-left: 5%;
     border-radius: 10px;
 }
 
@@ -382,9 +382,11 @@ h1 .type3{
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 20%;
   background: url('imgs/buttomsvg.svg') no-repeat center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .wave-top {
@@ -475,12 +477,22 @@ h1 .type3{
 }
 
 
-/* footer */
 footer {
   background-color: var(--black);
   color: var(--white);
   
 }
+
+.wave-footer{   
+  background-image: url('imgs/foot-wave.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: -1%;
+  width: 110vw;
+  height: 100%;
+  position: absolute;
+}
+
 
 .footer-container {
   margin: 0 auto;
@@ -488,8 +500,9 @@ footer {
 }
 
 .footer-top {
+  padding-top: 120px;
   display: flex;
-  justify-content: space-between; /* This keeps items spaced apart */
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 20px;
@@ -506,9 +519,14 @@ footer {
 
 .footer-menu {
   list-style: none;
+  align-items: center;
+  margin-left: -50%;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
   padding: 0;
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 
 .footer-menu li a {
@@ -523,14 +541,83 @@ footer {
 
 .social-icons {
   align-items: flex-end;
-  
+  position: absolute;
   display: flex;
+  margin-left: 65%;
+  margin-top: 14%;
   gap: 10px;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+/* youtube*/
+.containerFour:hover {
+  background-color: #8c1212;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .footer-middle {
@@ -616,11 +703,8 @@ iframe {
   background-color: var(--yellow-color);
   text-align: center;
   font-family: "Inter", sans-serif;
-  /* font-weight: 700; */
+  font-weight: 700;
   color: var(--white);
-  /* width: 100%; */
-  padding: 30px 0;
-  /* margin-top: 20px; */
+  padding: 20px 0;
   font-size: 14px;
-  /* margin-bottom: -30%; */
 }
