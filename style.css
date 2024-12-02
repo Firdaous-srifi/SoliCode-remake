@@ -9,10 +9,7 @@
     --black: #000000; /* Black color */
     --white: #FFFFFF; /* White color */
     --font-family: 'ADLaM', sans-serif;
-    --font-family2: "Inter", sans-serif;
-
-
-    
+    --font-family2: "Inter", sans-serif;    
 }
 
 .yellow {
@@ -27,9 +24,8 @@
 }
 
 /* header and hero section */
-
 header {
-    position:  fixed; 
+  position: absolute;
     z-index: 10;  
     font-family: var(--font-family);
     display: flex;               
@@ -125,13 +121,8 @@ header {
   scale: 0.7;
 }
 
-
-
-
-
-
+/* hero section */
 .hero {
-  
     position: relative;
     height: 610px; 
     background: url('imgs/sigmund-Fa9b57hffnM-unsplash.jpg') no-repeat center center/cover; 
@@ -155,9 +146,11 @@ header {
 .hero-content {
     font-family: var(--font-family);
     margin-left: 10%;
-    z-index: 1; /* Ensure it stays above the background */
-    margin-top: 12%; /* Adjust content position to avoid overlap with logo */
+    z-index: 1;
+    margin-top: 12%; 
 }
+
+/* comment code */
 /* .hero-content h1 span {
     color: var(--yellow-color);
 }
@@ -167,7 +160,7 @@ header {
 /**/
 
 
-h1{
+.hero-content h1{
   font-size: clamp(1rem, 3vw + 1rem, 4rem);
   position: relative;
   font-family: "Source Code Pro", monospace;
@@ -175,27 +168,6 @@ h1{
   width: max-content;
   
 }
-
-/* .container{
-  display: inline-block;
-}
-.typed-out{
-  overflow: hidden;
-  border-right: .15em solid var(--yellow-color);
-  white-space: nowrap;
-  animation: typing 2.5s steps(50, end) forwards;
-  font-size: 1.6rem;
-  width: 0;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-} */
-
-
-
-
-
 .c1{
   display: inline-block;
 }
@@ -209,7 +181,7 @@ h1{
   display: inline-block;
 }
 
-h1 .type{
+.hero-content h1 .type{
     font-size: 1.5rem;
     overflow: hidden;
     border-right: .15em solid var(--yellow-color);
@@ -218,7 +190,7 @@ h1 .type{
     animation: 
       typing 1s steps(25, end) forwards;
 }
-h1 .type2{
+.hero-content h1 .type2{
     font-size: 1.5rem; 
     overflow: hidden;
     border-right: .15em solid var(--yellow-color);
@@ -228,7 +200,8 @@ h1 .type2{
       typing 1s steps(25, end) forwards;
     animation-delay: 1s;
 }
-h1 .type3{
+
+.hero-content h1 .type3{
   font-size: 2rem; 
   overflow: hidden;
   margin-top: 6%;
@@ -249,51 +222,26 @@ h1 .type3{
   to { border-color: var(--blue-color); }
 }
 
-/**/
-
-
-
-.divded {
-    display: block;
-    font-size: 1.5rem;
-}
-
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    padding: 15px 30px;
-    background-color: var(--blue-color);
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--blue-color);
+/* Overlay for Contrast (Optional) */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+  z-index: 0; /* Keeps the overlay behind everything */
 }
 
 
 /* A proprs de nous */
-
-/*INFOS*/
-.infos{
-  background-color: var(--white); 
+.container-infos {
   padding-left: 150px; 
   padding-right: 150px;
   padding-top: 20px;
   padding-bottom: 20px;
-}
+  }
 
 .infos-title{
   font-family: var(--font-family);
@@ -303,17 +251,6 @@ h1 .type3{
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--black); 
-}
-
-.container-infos {
-/* background-color: var(--black); */
-  
-/* width: 80%; */
-/* margin: 0; */
-padding-left: 150px; 
-padding-right: 150px;
-padding-top: 20px;
-padding-bottom: 20px;
 }
 
 .infos-image {
@@ -327,8 +264,6 @@ width: 100%;
 height: 100%;
 object-fit: cover;
 border-radius: 20px;
-/* opacity: 0.7; */
-
 }
 
 .infos-card {
@@ -339,7 +274,6 @@ transform: translate(-50%, -50%);
 background-color: var(--white);
 padding: 40px;
 border-radius: 20px;
-/* width: 80%; */
 max-width: 800px;
 box-shadow: 0px 15px 15px 0px var(--black);
 }
@@ -351,31 +285,25 @@ display: inline-block;
 
 .infos-card p:hover {
 transform: scale(1.05);
-color: var(--blue-color); /* A nice blue color to highlight */
+color: var(--blue-color);
 text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Optional: Add a subtle underline effect on hover */
 .infos-card p:hover {
 text-decoration: underline;
-text-decoration-color: var(--yellow-color); /* Yellow to match your SOLICODE color */
-text-decoration-thickness: 2px;
+text-decoration-color: var(--yellow-color); 
 }
 
-/* For the strong and colored text, you might want a slightly different effect */
 .infos-card p strong:hover,
 .infos-card p span:hover {
-color: var(--black-color); /* Slightly darker blue */
+color: var(--black-color); 
 transform: scale(4.1);
 }
 
 
-/* our experince  */
+/* Expérience d'apprentissage */
 .container-experience{
   background-color: var(--black);
-  
-  /* width: 80%; */
-  /* margin: 0; */
   padding-left: 150px; 
   padding-right: 150px;
   padding-top: 20px;
@@ -393,15 +321,11 @@ transform: scale(4.1);
   
 }
 .experience-content{
-  /* align-items: left; */
   display: flex;
-  /* align-items: right; */
   flex-direction: row;
 }
 
 .experience-content img{
-  
-  /* float: left; */
   padding: 10px; 
   max-width: 40%;
   height: auto;
@@ -419,19 +343,18 @@ transform: scale(4.1);
 .experience-content ul {
   list-style:none;
   padding: 5px 0 0 30px;
-  color: var(--white); /* White text color */
-  /* line-height: 2.3; */
+  color: var(--white); 
 }
+
 .experience-content li {
   margin-bottom: 15px;
   line-height: 2.3;
 }
 
 
-/* formation */
 
+/* Formation Section */
 .container-formation{
-  
   padding-left: 100px; 
   padding-right: 100px;
   padding-top: 20px;
@@ -440,36 +363,24 @@ transform: scale(4.1);
   display: flex;
   gap: 70px;
   justify-content: center;
-  /* color: var(--blue-color); */
-  /* align-items: center; */
-  /* flex-wrap: wrap; */
+  margin-bottom: 30px;
 }
 
 .container-formation h2{
   font-family: var(--font-family);
+  position: absolute;
   justify-content: center;
     text-align: center;
     margin: 10px;
     font-size: 40px;
     font-weight: bold;
     padding: 40px;
-    
 }
 
-
-/* .container-formation h2{
-  font-family: var(--font-family);
-  text-align: center;
-  margin: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 40px;
-  color: var(--yellow-black);
-} */
-
 .card {
-  width: 500px;
-  height: 500px;
+  margin-top: 120px;
+  width: 400px;
+  height: auto;
   border-radius: 20px;
   position: relative;
 }
@@ -518,11 +429,6 @@ transform: scale(4.1);
   gap: 18px;
 }
 
-/* .img-app{
- 
-  border-bottom:40px solid #000000;
-} */
-
 .content h1 {
   font-size: 36px;
   color: var(--yellow-color);
@@ -536,22 +442,8 @@ transform: scale(4.1);
   font-size: 20px;
   font-family: var(--font-family2);
 }
-
-
-
-/* Overlay for Contrast (Optional) */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
-    z-index: 0; /* Keeps the overlay behind everything */
-}
-
   
+/* about Programmes */
 .about-programs {
   margin-top: 5%;
   position: relative;
@@ -560,9 +452,27 @@ transform: scale(4.1);
   padding: 220px 20px;
 }
 
+.wave-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background: url('imgs/topsvg.svg') no-repeat center top; /* Path to your wave SVG */
+}
+
 .about-programs .content {
   text-align: center;
 }
+
+.program-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
 
 .about-programs h2 {
   font-family: "ADLaM Display", system-ui;
@@ -577,23 +487,10 @@ transform: scale(4.1);
   margin-bottom: 40px;
 }
 
-.program-details {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
 .top-items {
   display: flex; /* Use flexbox to align items inline */
   justify-content: center; /* Center the items horizontally */
   gap: 30px;
-}
-
-.under-items {
-  display: flex; 
-  justify-content: center; 
-  gap: 30px; /
 }
 
 .program-item {
@@ -632,7 +529,14 @@ transform: scale(4.1);
   font-size: 18px;
 }
 
-.wave-background {
+.under-items {
+  display: flex; 
+  justify-content: center; 
+  gap: 30px; /
+}
+
+
+.wave-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -644,20 +548,8 @@ transform: scale(4.1);
   background-position: bottom;
 }
 
-.wave-top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 60%;
-  background-size: cover;
-  background: url('imgs/topsvg.svg') no-repeat center top; /* Path to your wave SVG */
-}
 
-
-
-/* activites */
-
+/* Activities Section  */
 .activities-section {
   text-align: center;
   padding: 40px 20px;
@@ -732,6 +624,7 @@ transform: scale(4.1);
 }
 
 
+/* Footer */
 footer {
   background-color: var(--black);
   color: var(--white);
@@ -747,7 +640,6 @@ footer {
   height: 100%;
   position: absolute;
 }
-
 
 .footer-container {
   margin: 0 auto;
@@ -950,8 +842,8 @@ iframe {
 
 .women-pic {
   width: 14%;
-  margin-bottom: -28%; /* Adjust the width as necessary */
-  margin-left: 70%; /* This will push the image to the right */
+  margin-bottom: -28%; 
+  margin-left: 70%; 
 }
 
 .footer-copyright {
