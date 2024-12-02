@@ -374,9 +374,11 @@ h2{
   display: flex;
   gap: 70px;
   justify-content: center;
+  /* color: var(--blue-color); */
   /* align-items: center; */
   /* flex-wrap: wrap; */
 }
+
 
 /* .container-formation h2{
   font-family: var(--font-family);
