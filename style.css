@@ -79,7 +79,7 @@ h2{
   overflow: hidden;
 }
 
-.infos-image img {
+.infos-image .vid {
   width: 100%;
   height: 100%;
   object-fit: cover;
