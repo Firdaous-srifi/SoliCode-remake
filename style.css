@@ -10,6 +10,13 @@
     --white: #FFFFFF; /* White color */
     --font-family: 'ADLaM', sans-serif;
     --font-family2: "Inter", sans-serif;
+
+
+    
+}
+
+.yellow {
+  color: var(--yellow-color);
 }
 
 *{
@@ -108,12 +115,99 @@ header {
     z-index: 1; /* Ensure it stays above the background */
     margin-top: 12%; /* Adjust content position to avoid overlap with logo */
 }
-.hero-content h1 span {
+/* .hero-content h1 span {
     color: var(--yellow-color);
 }
 .numbers_highlights{
    color: var(--yellow-color);
+} */
+/**/
+
+
+h1{
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+  
 }
+
+/* .container{
+  display: inline-block;
+}
+.typed-out{
+  overflow: hidden;
+  border-right: .15em solid var(--yellow-color);
+  white-space: nowrap;
+  animation: typing 2.5s steps(50, end) forwards;
+  font-size: 1.6rem;
+  width: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+} */
+
+
+
+
+
+.c1{
+  display: inline-block;
+}
+.c2{
+  display: inline-block;
+}
+.c3{
+  display: inline-block;
+}
+.c4{
+  display: inline-block;
+}
+
+h1 .type{
+    font-size: 1.5rem;
+    overflow: hidden;
+    border-right: .15em solid var(--yellow-color);
+    white-space: nowrap; 
+    width: 0;
+    animation: 
+      typing 1s steps(25, end) forwards;
+}
+h1 .type2{
+    font-size: 1.5rem; 
+    overflow: hidden;
+    border-right: .15em solid var(--yellow-color);
+    white-space: nowrap; 
+    width: 0;
+    animation: 
+      typing 1s steps(25, end) forwards;
+    animation-delay: 1s;
+}
+h1 .type3{
+  font-size: 2rem; 
+  overflow: hidden;
+  margin-top: 6%;
+  border-right: .15em solid var(--yellow-color); 
+  white-space: nowrap; 
+  width: 0;
+  animation: 
+      typing 2s steps(30, end) forwards,
+      blink .75s infinite;
+  animation-delay: 2s;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: var(--blue-color); }
+}
+
+/**/
+
 
 
 .divded {
@@ -134,8 +228,8 @@ header {
 
 .cta-button {
     padding: 15px 30px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--blue-color);
+    color: var(--white);
     text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
@@ -143,7 +237,7 @@ header {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--blue-color);
 }
 
 
@@ -226,7 +320,7 @@ header {
   display: flex;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  color: #656565;
+  color: var(--dark-gray);
   justify-content: flex-start;
   font-size: 12px;
   margin-bottom: 10px;
@@ -267,7 +361,7 @@ header {
 .activities-section {
   text-align: center;
   padding: 40px 20px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .section-title {
@@ -315,7 +409,7 @@ header {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 14px;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 10px;
 }
 
@@ -340,8 +434,8 @@ header {
 
 /* footer */
 footer {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   
 }
 
@@ -361,7 +455,10 @@ footer {
 
 
 .logo {
-  height: 50px;
+  height: 70px;
+  display: flex;
+  padding-left: 76px;
+  
 }
 
 .footer-menu {
@@ -372,7 +469,7 @@ footer {
 }
 
 .footer-menu li a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   font-size: 14px;
 }
@@ -437,19 +534,19 @@ footer {
 }
 
 .contact-button {
-  background-color: #ffc107;
-  color: #000;
+  background-color: var(--yellow-color);
+  color: var(--black);
   padding: 10px 90px;
   text-decoration: none;
   border-radius: 13px;
   font-weight: 700;
   margin-left: 5%;
   font-family: "Inter", sans-serif;
-  color: white;
+  color: var(--white);
 }
 
 .contact-button:hover {
-  background-color: #ff9f00;
+  background-color: var(--yellow-color);
 }
 
 .footer-bottom {
@@ -473,14 +570,14 @@ iframe {
 }
 
 .footer-copyright {
-  background-color: #ffc107;
+  background-color: var(--yellow-color);
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-weight: 700;
-  color: white;
-  width: 100%;
-  padding: 10px 0;
-  margin-top: 20px;
+  /* font-weight: 700; */
+  color: var(--white);
+  /* width: 100%; */
+  padding: 30px 0;
+  /* margin-top: 20px; */
   font-size: 14px;
-  margin-bottom: -30%;
+  /* margin-bottom: -30%; */
 }
