@@ -1,0 +1,250 @@
+:root {
+    --blue-color: #424DC1; 
+    --yellow-color: #F2B705; 
+    --tertiary-color: #4550BE;
+    --dark-gray: #444444; 
+    --black: #000000; /* Black color */
+    --white: #FFFFFF; /* White color */
+    --font-family: 'ADLaM Display', sans-serif; 
+    --font-family2:'Arial', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.yellow{
+    color: var(--yellow-color);
+}
+.yellow-li{
+  color: var(--yellow-color);
+  font-weight:bolder;
+}
+.blue{
+    color: var(--blue-color);
+}
+
+h2{
+  font-family: var(--font-family);
+    text-align: center;
+    margin: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 40px;
+    
+}
+
+/*HEADER*/
+
+/*INFOS*/
+.infos{
+    background-color: var(--white); 
+    padding-left: 150px; 
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.infos-title{
+    font-family: var(--font-family);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--black); 
+}
+
+.container-infos {
+  padding-left: 150px; 
+  padding-right: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.infos-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.infos-image .vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;  
+}
+
+.infos-card {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  box-shadow: 0px 15px 15px 0px var(--black);
+}
+
+.infos-card p {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.infos-card p:hover {
+  transform: scale(1.05);
+  color: var(--blue-color);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+
+.infos-card p:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow-color); /* Yellow to match your SOLICODE color */
+  text-decoration-thickness: 2px;
+}
+
+
+.infos-card p strong:hover,
+.infos-card p span:hover {
+  color: var(--black-color); /* Slightly darker blue */
+  transform: scale(4.1);
+}
+
+/***********************EXPERIENCE***************************/
+.container-experience{
+    background-color: var(--black);
+    padding-left: 150px; 
+    padding-right: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container-experience h2{
+    font-family: var(--font-family);
+    text-align: center;
+    margin: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 40px;
+    color: var(--yellow-color);
+    
+}
+.experience-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-content img{
+    padding: 10px; 
+    max-width: 40%;
+    height: auto;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.experience-content h3 {
+    color: var(--white);
+    padding: 0;
+    line-height: 2.5;
+}
+
+.experience-content ul {
+    list-style:none;
+    padding: 5px 0 0 30px;
+    color: var(--white); /* White text color */
+}
+.experience-content li {
+    margin-bottom: 15px;
+    line-height: 2.3;
+}
+
+/*******************************************PROGRAMMES*************************/
+.container-formation{
+  
+  padding-left: 100px; 
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100vh;
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.image-box,
+.content-box {
+  width: 100%;
+  height: 100%;
+  transition: all 0.35s linear;
+}
+
+.image-box .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius:20px;
+  filter: grayscale(100%);
+}
+
+.content-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--blue-color);
+  border-radius: 20px;
+  transform: translate3d(0, -150px, -220px) rotate3d(1, 0, 0, 90deg);
+  transform-origin: center;
+  opacity: 0;
+}
+
+.card:hover .content-box {
+  transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+  opacity: 1;
+}
+.card:hover .image-box {
+  transform: translate3d(0, 150px, 220px) rotate3d(1, 0, 0, -90deg);
+  opacity: 0;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.content h1 {
+  font-size: 36px;
+  color: var(--yellow-color);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--white);
+}
+
+.content p {
+  text-align: center;
+  color: var(--white);
+  font-size: 20px;
+  font-family: var(--font-family2);
+}
+
+
+
+/*ABOUT*/
+
+/*ACTIVITES*/
+
+/*FOOTER*/

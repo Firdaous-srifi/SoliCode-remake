@@ -15,6 +15,9 @@
 .yellow {
   color: var(--yellow-color);
 }
+.blue {
+  color: var(--blue-color);
+}
 
 *{
   max-width: 100%;
@@ -23,7 +26,7 @@
     box-sizing: border-box;
 }
 
-/* header and hero section */
+/********************************** HEADER *****************************/
 header {
   position: absolute;
     z-index: 10;  
@@ -121,7 +124,7 @@ header {
   scale: 0.7;
 }
 
-/* hero section */
+/**************************** HERO SECTION *************************/
 .hero {
     position: relative;
     height: 610px; 
@@ -149,15 +152,6 @@ header {
     z-index: 1;
     margin-top: 12%; 
 }
-
-/* comment code */
-/* .hero-content h1 span {
-    color: var(--yellow-color);
-}
-.numbers_highlights{
-   color: var(--yellow-color);
-} */
-/**/
 
 
 .hero-content h1{
@@ -230,8 +224,8 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
-  z-index: 0; /* Keeps the overlay behind everything */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 
@@ -301,7 +295,7 @@ transform: scale(4.1);
 }
 
 
-/* Expérience d'apprentissage */
+/********************* EXPERIENCE D'APPRENTISSAGE ************************/
 .container-experience{
   background-color: var(--black);
   padding-left: 150px; 
@@ -353,7 +347,7 @@ transform: scale(4.1);
 
 
 
-/* Formation Section */
+/**************************** FORMATION **********************/
 .container-formation{
   padding-left: 100px; 
   padding-right: 100px;
@@ -443,7 +437,7 @@ transform: scale(4.1);
   font-family: var(--font-family2);
 }
   
-/* about Programmes */
+/******************************* ABOUT PROGRAMMES *********************/
 .about-programs {
   margin-top: 5%;
   position: relative;
@@ -624,7 +618,7 @@ transform: scale(4.1);
 }
 
 
-/* Footer */
+/********************** FOOTER *******************/
 footer {
   background-color: var(--black);
   color: var(--white);
