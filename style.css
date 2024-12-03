@@ -39,6 +39,7 @@ header {
     width: 90%;        
     background-color: var(--blue-color);
     margin-left: 5%;
+    z-index: 20000;
     border-radius: 10px;
 }
 
@@ -139,7 +140,21 @@ header {
     flex-direction: column; 
     align-items: left; 
     text-align: left;
+<<<<<<< Updated upstream
     color: white;
+=======
+    color: var(--white);
+    overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensure particles are behind the content */
+>>>>>>> Stashed changes
 }
 
 .wave-line {   
@@ -155,8 +170,13 @@ header {
 .hero-content {
     font-family: var(--font-family);
     margin-left: 10%;
+<<<<<<< Updated upstream
     z-index: 1; /* Ensure it stays above the background */
     margin-top: 12%; /* Adjust content position to avoid overlap with logo */
+=======
+    z-index: 3;
+    margin-top: 12%; 
+>>>>>>> Stashed changes
 }
 /* .hero-content h1 span {
     color: var(--yellow-color);
@@ -166,6 +186,7 @@ header {
 } */
 /**/
 
+<<<<<<< Updated upstream
 
 h1{
   font-size: clamp(1rem, 3vw + 1rem, 4rem);
@@ -206,6 +227,9 @@ h1{
   display: inline-block;
 }
 .c4{
+=======
+.c1, .c2, .c3, .c4 {
+>>>>>>> Stashed changes
   display: inline-block;
 }
 
@@ -218,7 +242,12 @@ h1 .type{
     animation: 
       typing 1s steps(25, end) forwards;
 }
+<<<<<<< Updated upstream
 h1 .type2{
+=======
+
+.hero-content .type2{
+>>>>>>> Stashed changes
     font-size: 1.5rem; 
     overflow: hidden;
     border-right: .15em solid var(--yellow-color);
