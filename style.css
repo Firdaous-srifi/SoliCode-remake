@@ -1,3 +1,6 @@
+/***********************************
+***********ROOT
+***********************************/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
@@ -8,15 +11,12 @@
     --dark-gray: #444444; 
     --black: #000000; /* Black color */
     --white: #FFFFFF; /* White color */
-    --font-family: 'ADLaM', sans-serif;
+    font-family: "ADLaM Display", system-ui;
     --font-family2: "Inter", sans-serif;    
 }
 
-.yellow {
-  color: var(--yellow-color);
-}
-.blue {
-  color: var(--blue-color);
+html{
+  scroll-behavior: smooth;
 }
 
 *{
@@ -26,7 +26,15 @@
     box-sizing: border-box;
 }
 
-/********************************** HEADER *****************************/
+.yellow {
+  color: var(--yellow-color);
+}
+.blue {
+  color: var(--blue-color);
+}
+/********************************** 
+**********HEADER 
+*****************************/
 header {
     position: absolute;
     position: fixed;
@@ -130,7 +138,9 @@ header {
   scale: 0.7;
 }
 
-/**************************** HERO SECTION *************************/
+/*************************************** 
+********HERO SECTION
+****************************************/
 .hero {
     position: relative;
     height: 610px; 
@@ -140,6 +150,7 @@ header {
     align-items: left; 
     text-align: left;
     color: var(--white);
+    height: 800px;
 }
 
 .wave-line {   
@@ -151,22 +162,14 @@ header {
     position: absolute;
 }
 
-/* Hero Content Styling */
+/*HERO CONTENT*/
 .hero-content {
     font-family: var(--font-family);
     margin-left: 10%;
     z-index: 1;
-    margin-top: 12%; 
-}
+    margin-top: 12%;
+}    
 
-
-/* .hero-content h1{
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
-  position: relative;
-  font-family: "Source Code Pro", monospace;
-  position: relative;
-  width: max-content;
-} */
 
 .c1{
   display: inline-block;
@@ -211,7 +214,7 @@ header {
   animation: 
       typing 2s steps(30, end) forwards,
       blink .75s infinite;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
 @keyframes typing {
   from { width: 0 }
@@ -222,7 +225,7 @@ header {
   to { border-color: var(--blue-color); }
 }
 
-/* Overlay for Contrast (Optional) */
+
 .hero::before {
   content: '';
   position: absolute;
@@ -235,7 +238,9 @@ header {
 }
 
 
-/* A proprs de nous */
+/*****************************************************
+********************A PROPOS DE NOUS 
+*******************************************************/
 .container-infos {
   padding-left: 150px; 
   padding-right: 150px;
@@ -303,7 +308,9 @@ transform: scale(4.1);
 }
 
 
-/********************* EXPERIENCE D'APPRENTISSAGE ************************/
+/****************************************************************** 
+*********************EXPERIENCE D'APPRENTISSAGE 
+*******************************************************************/
 .container-experience{
   background-color: var(--black);
   padding-left: 150px; 
@@ -355,7 +362,9 @@ transform: scale(4.1);
 
 
 
-/**************************** FORMATION **********************/
+/**************************************************************** 
+****************************FORMATIONS
+*******************************************************************/
 .container-formation{
   padding-left: 100px; 
   padding-right: 100px;
@@ -372,11 +381,11 @@ transform: scale(4.1);
   font-family: var(--font-family);
   position: absolute;
   justify-content: center;
-    text-align: center;
-    margin: 10px;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 40px;
+  text-align: center;
+  margin: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 40px;
 }
 
 .card {
@@ -444,13 +453,16 @@ transform: scale(4.1);
   font-size: 20px;
   font-family: var(--font-family2);
 }
+
   
-/******************************* ABOUT PROGRAMMES *********************/
+/************************************************************ 
+***********************PROGRAMES
+**********************************************************/
 .about-programs {
   margin-top: 5%;
   position: relative;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   padding: 220px 20px;
 }
 
@@ -551,7 +563,9 @@ transform: scale(4.1);
 }
 
 
-/* Activities Section  */
+/**************************************************************** 
+*********************ACTIVITES SECTION
+******************************************************************/
 .activities-section {
   text-align: center;
   padding: 40px 20px;
@@ -561,8 +575,9 @@ transform: scale(4.1);
 .section-title {
   font-family: "ADLaM Display", system-ui;
   font-size: 35px;
-  color: #333;
+  color: var(--black);
   margin-bottom: 50px;
+  font-weight: 700;
 }
 
 .activities-container {
@@ -573,7 +588,7 @@ transform: scale(4.1);
 }
 
 .activity-card {
-  background-color: #E5E7EB;
+  background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.046);
   overflow: hidden;
@@ -613,7 +628,7 @@ transform: scale(4.1);
   text-align: left;
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: #656565;
+  color: var(--dark-gray);
   margin: 0;
 }
 
@@ -621,12 +636,14 @@ transform: scale(4.1);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #656565;
+  color: var(--dark-gray);
   margin-top: 40px;
 }
 
 
-/********************** FOOTER *******************/
+/*************************************************************** 
+*****************************FOOTER 
+************************************************************************/
 footer {
   background-color: var(--black);
   color: var(--white);
@@ -685,8 +702,9 @@ footer {
 }
 
 .footer-menu li a:hover {
-  text-decoration: underline;
+  color: var(--yellow-color);
 }
+
 
 .social-icons {
   align-items: flex-end;
@@ -814,18 +832,26 @@ footer {
 
 .contact-button {
   background-color: var(--yellow-color);
-  color: var(--black);
+  color: var(--white);
   padding: 10px 90px;
   text-decoration: none;
   border-radius: 13px;
   font-weight: 700;
   margin-left: 5%;
-  font-family: "Inter", sans-serif;
-  color: var(--white);
+  font-family: var(--font-family2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: var(--yellow-color);
+  background-color: var(--blue-color);
+  transform: scale(1.05);
+}
+
+.contact-button:focus {
+  outline: 2px solid var(--black);
+  outline-offset: 3px;
 }
 
 .footer-bottom {
@@ -842,8 +868,8 @@ iframe {
   margin-top: -2%;
 }
 
-.women-pic {
-  width: 14%;
+.woman-pic {
+  width: 15%;
   margin-bottom: -28%; 
   margin-left: 70%; 
 }

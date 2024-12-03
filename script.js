@@ -38,3 +38,4 @@ function handleScrollAnimation() {
 
 // Add scroll event listener
 window.addEventListener('scroll', handleScrollAnimation);
+
