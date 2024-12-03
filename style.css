@@ -64,6 +64,10 @@ header {
     margin: 0 15px;              
 }
 
+.icons-section li a:hover {
+  color: var(--yellow-color);
+}
+
 .icons-section a {
     text-decoration: none;       
     color: var(--white);            
@@ -207,7 +211,7 @@ header {
   animation: 
       typing 2s steps(30, end) forwards,
       blink .75s infinite;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 @keyframes typing {
   from { width: 0 }
@@ -237,14 +241,14 @@ header {
   padding-right: 150px;
   padding-top: 20px;
   padding-bottom: 20px;
-  }
+}
 
 .container-infos h2{
   font-family: var(--font-family);
   text-align: center;
   margin-bottom: 20px;
   font-size: 40px;
-  font-weight: bold;
+  font-weight:700;
   margin-bottom: 20px;
   color: var(--black); 
 }
