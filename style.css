@@ -301,6 +301,7 @@ box-shadow: 0px 15px 15px 0px var(--black);
 .infos-card p {
 transition: all 0.3s ease;
 display: inline-block;
+font-
 }
 
 .infos-card p:hover {
@@ -813,7 +814,7 @@ footer {
   font-family: var(--font-family2);
 }
 
-.footer-middle address {
+.footer-middle section {
   font-style: var(--font-family2);
   margin: 30px 0;
   margin-left: 5%;
@@ -845,7 +846,7 @@ footer {
 
 .contact-button {
   background-color: var(--yellow-color);
-  color: var(--white);
+  color: var(--white); /* Default text color */
   padding: 10px 90px;
   text-decoration: none;
   border-radius: 13px;
@@ -858,8 +859,9 @@ footer {
 }
 
 .contact-button:hover {
-  background-color: var(--blue-color);
+  color: var(--blue-color); /* Changes text color to blue on hover */
   transform: scale(1.05);
+  background-color: var(--yellow-color); /* Ensures background color stays the same */
 }
 
 .contact-button:focus {
@@ -881,7 +883,7 @@ iframe {
   margin-top: -2%;
 }
 
-.woman-pic {
+.footer-pic {
   width: 15%;
   margin-bottom: -28%; 
   margin-left: 70%; 
@@ -900,3 +902,152 @@ iframe {
 /*************************************************
 ****************RESPONSIVE DESIGN
 ****************************************************/
+
+/*navbar*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo-solicode{
+    max-height: 60px;
+    text-align: center;
+  }
+
+
+  #Subscription-btn {
+    width: 28%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/*header*/
+@media (max-width: 768px) {
+  .hero {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  .hero-content {
+    margin-left: 10%;
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .hero-content .type, .hero-content .type2 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    width: 100%;
+  }
+
+  .hero-content .type3 {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+}
+
+/*a propos de nous*/
+@media (max-width: 768px) {
+  .container-infos {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container-infos h2 {
+    font-size: 30px; 
+  }
+  
+  .infos-image {
+    height: 300px; 
+  }
+
+  .infos-card {
+    padding: 20px;
+    max-width: 100%;
+    box-shadow: none;
+  }
+}
+
+/*experince*/
+@media (max-width: 768px) {
+  .container-experience {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .experience-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experience-content img {
+    max-width: 80%;
+  }
+}
+
+/*filieres*/
+@media (max-width: 768px) {
+  .container-formation {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .image-box,
+  .content-box {
+    height: auto; 
+  }
+}
+
+/*about programs*/
+@media (max-width: 768px) {
+  .program-details {
+    flex-direction: row;
+  }
+
+  .program-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*activites*/
+@media (max-width: 768px) {
+  .activities-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .activity-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*footer*/
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-menu {
+    margin-left: 0;
+    gap: 15px;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .socialContainer {
+    width: 45px;
+    height: 45px;
+  }
+}
