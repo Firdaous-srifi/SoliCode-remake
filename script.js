@@ -113,3 +113,39 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Particles.js library not loaded');
     }
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('main-header');
+    const solicodeLogo = document.querySelector('.logo-solicode');
+    const originalSolicodeSrc = solicodeLogo.src;
+    const scrollSolicodeSrc = solicodeLogo.getAttribute('data-scroll-src');
+    
+    // Store the original logo's height and width
+    const originalHeight = solicodeLogo.offsetHeight;
+    const originalWidth = solicodeLogo.offsetWidth;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            // Add scrolled class to header
+            header.classList.add('scrolled');
+
+            // Change only Solicode logo source
+            solicodeLogo.src = scrollSolicodeSrc;
+            
+            // Ensure the new logo maintains the original size
+            solicodeLogo.style.height = `$50px`;
+            solicodeLogo.style.width = `$50px`;
+        } else {
+            // Remove scrolled class from header
+            header.classList.remove('scrolled');
+
+            // Revert Solicode logo to original source
+            solicodeLogo.src = originalSolicodeSrc;
+            
+            // Remove explicit sizing
+            solicodeLogo.style.height = '';
+            solicodeLogo.style.width = '';
+        }
+    });
+});

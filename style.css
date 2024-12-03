@@ -1,3 +1,4 @@
+
 /***********************************
 ***********ROOT
 ***********************************/
@@ -7,11 +8,11 @@
 :root {
     --blue-color: #424DC1; 
     --yellow-color: #F2B705; 
-    --tertiary-color: #4550BE;
+    --tertiary-color: #0b1366;
     --dark-gray: #444444; 
-    --black: #000000; /* Black color */
-    --white: #FFFFFF; /* White color */
-    font-family: "ADLaM Display", system-ui;
+    --black: #000000; 
+    --white: #FFFFFF;
+    --font-family: "ADLaM Display", system-ui;
     --font-family2: "Inter", sans-serif;    
 }
 
@@ -33,8 +34,10 @@ html{
   color: var(--blue-color);
 }
 /********************************** 
-**********HEADER 
+**********NAVBAR
 *****************************/
+
+
 header {
     position: absolute;
     position: fixed;
@@ -47,7 +50,7 @@ header {
     width: 90%;        
     background-color: var(--blue-color);
     margin-left: 5%;
-    border-radius: 10px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .logo-offpt {
@@ -57,7 +60,7 @@ header {
 
 .logo-solicode {
     max-height: 60px;
-    margin-left: -13%;            
+    margin-left: -20%;            
 }
 
 .icons-section ul {
@@ -65,7 +68,6 @@ header {
     list-style: none;            
     margin: 0;
     padding: 0;
-    
 }
 
 .icons-section li {
@@ -138,13 +140,27 @@ header {
   scale: 0.7;
 }
 
+/* Scrolled state styles */
+header.scrolled {
+  background-color: var(--yellow-color);
+}
+
+header.scrolled .icons-section a {
+  color: var(--white-color);
+}
+
+header.scrolled #Subscription-btn {
+  background-color: var(--blue-color);
+  color: var(--white);
+}
+
 /*************************************** 
-********HERO SECTION
+**************HERO SECTION
 ****************************************/
 .hero {
     position: relative;
     height: 610px; 
-    background: url('imgs/WhatsApp\ Image\ 2024-12-03\ at\ 5.40.24\ AM.jpeg') no-repeat center center/cover; 
+    background: url('imgs/heropic.jpeg') no-repeat center center/cover; 
     display: flex;
     flex-direction: column; 
     align-items: left; 
@@ -172,8 +188,8 @@ header {
 
 #particles-js {
   width: 150%;
-  height: 730px; /* Use full viewport height */
-  position: absolute; /* Ensure full coverage */
+  height: 730px;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -202,7 +218,7 @@ header {
 }
 
 .hero-content .type3{
-  font-size: 2rem; 
+  font-size: 3.5rem; 
   overflow: hidden;
   margin-top: 6%;
   border-right: .15em solid var(--yellow-color); 
@@ -499,8 +515,8 @@ transform: scale(4.1);
 }
 
 .top-items {
-  display: flex; /* Use flexbox to align items inline */
-  justify-content: center; /* Center the items horizontally */
+  display: flex;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -518,7 +534,7 @@ transform: scale(4.1);
   list-style: none;            
   font-size: 30px;
   margin-bottom: 10px;
-  justify-content: flex-start; /* Aligns icons to the left */
+  justify-content: flex-start;
 }
 
 
@@ -561,7 +577,7 @@ transform: scale(4.1);
 
 
 /**************************************************************** 
-*********************ACTIVITES SECTION
+*************************ACTIVITES SECTION
 ******************************************************************/
 .activities-section {
   text-align: center;
@@ -639,7 +655,7 @@ transform: scale(4.1);
 
 
 /*************************************************************** 
-*****************************FOOTER 
+***************************FOOTER 
 ************************************************************************/
 footer {
   background-color: var(--black);
@@ -880,3 +896,7 @@ iframe {
   padding: 20px 0;
   font-size: 14px;
 }
+
+/*************************************************
+****************RESPONSIVE DESIGN
+****************************************************/
