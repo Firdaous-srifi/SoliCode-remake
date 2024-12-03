@@ -28,7 +28,8 @@
 
 /********************************** HEADER *****************************/
 header {
-  position: absolute;
+    position: absolute;
+    position: fixed;
     z-index: 10;  
     font-family: var(--font-family);
     display: flex;               
@@ -83,7 +84,8 @@ header {
   padding: 12px;
   gap: 12px;
   border-radius: 20px;
-  cursor: pointer;           
+  cursor: pointer;   
+  font-weight: 600;
 }
 
 #Subscription-btn::before {
@@ -96,7 +98,7 @@ header {
   width: 128px;
   height: 48px;
   border-radius: 20px;
-  background: linear-gradient(-45deg, #F2B705 0%, #FFFFFF 100% );
+  background: linear-gradient(-45deg, #F2B705 20%, #424DC1 100% );
   z-index: -10;
   pointer-events: none;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -107,7 +109,7 @@ header {
   z-index: -1;
   position: absolute;
   inset: 0;
-  background: linear-gradient(-45deg, #F2B705 0%, #FFFFFF 100% );
+  background: linear-gradient(-45deg, #F2B705 20%, #424DC1 100% );
   transform: translate3d(0, 0, 0) scale(0.95);
   filter: blur(20px);
 }
@@ -128,12 +130,12 @@ header {
 .hero {
     position: relative;
     height: 610px; 
-    background: url('imgs/sigmund-Fa9b57hffnM-unsplash.jpg') no-repeat center center/cover; 
+    background: url('imgs/WhatsApp\ Image\ 2024-12-03\ at\ 5.40.24\ AM.jpeg') no-repeat center center/cover; 
     display: flex;
     flex-direction: column; 
     align-items: left; 
     text-align: left;
-    color: white;
+    color: var(--white);
 }
 
 .wave-line {   
@@ -154,14 +156,14 @@ header {
 }
 
 
-.hero-content h1{
+/* .hero-content h1{
   font-size: clamp(1rem, 3vw + 1rem, 4rem);
   position: relative;
   font-family: "Source Code Pro", monospace;
   position: relative;
   width: max-content;
-  
-}
+} */
+
 .c1{
   display: inline-block;
 }
@@ -175,7 +177,7 @@ header {
   display: inline-block;
 }
 
-.hero-content h1 .type{
+.hero-content .type{
     font-size: 1.5rem;
     overflow: hidden;
     border-right: .15em solid var(--yellow-color);
@@ -184,7 +186,7 @@ header {
     animation: 
       typing 1s steps(25, end) forwards;
 }
-.hero-content h1 .type2{
+.hero-content .type2{
     font-size: 1.5rem; 
     overflow: hidden;
     border-right: .15em solid var(--yellow-color);
@@ -195,7 +197,7 @@ header {
     animation-delay: 1s;
 }
 
-.hero-content h1 .type3{
+.hero-content .type3{
   font-size: 2rem; 
   overflow: hidden;
   margin-top: 6%;
@@ -237,7 +239,7 @@ header {
   padding-bottom: 20px;
   }
 
-.infos-title{
+.container-infos h2{
   font-family: var(--font-family);
   text-align: center;
   margin-bottom: 20px;
@@ -251,6 +253,7 @@ header {
 width: 100%;
 height: 400px;
 overflow: hidden;
+border-radius: 20px;
 }
 
 .infos-image .vid {
@@ -258,6 +261,7 @@ width: 100%;
 height: 100%;
 object-fit: cover;
 border-radius: 20px;
+border-top-left-radius: 20px;
 }
 
 .infos-card {
@@ -508,8 +512,8 @@ transform: scale(4.1);
 .program-item h3 {
   display: flex;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: var(--dark-gray);
+  font-weight: 600;
+  color: var(--yellow-color);
   justify-content: flex-start;
   font-size: 12px;
   margin-bottom: 10px;
