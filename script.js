@@ -39,3 +39,77 @@ function handleScrollAnimation() {
 // Add scroll event listener
 window.addEventListener('scroll', handleScrollAnimation);
 
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.particlesJS) {
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 1000,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          shape: {
+               type: 'circle', // Replace 'text' with a built-in shape like 'circle'
+          },
+          color: {
+            value: '#000000'
+          },
+          opacity: {
+            value: 0.8,
+            random: true
+          },
+          size: {
+            value: 6,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 10,
+              size_min: 10,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: false
+          },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+            attract: {
+              enable: false
+            }
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'repulse'
+            },
+            onclick: {
+              enable: true,
+              mode: 'push'
+            }
+          },
+          modes: {
+            repulse: {
+              distance: 100
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    } else {
+      console.error('Particles.js library not loaded');
+    }
+  });
