@@ -789,25 +789,35 @@ transform: scale(4.1);
   font-weight: 700;
 }
 
+.slideshow-container {
+  width: 100%; /* Full width of the container */
+  overflow: hidden; /* Hide overflowing cards */
+  position: relative;
+}
+
 .activities-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 90px;
+  gap: 50px; 
+  animation: slideRight 20s linear infinite; 
+}
+
+.activities-container:hover {
+  animation-play-state: paused; /* Pause the animation when hovering */
 }
 
 .activity-card {
+  flex: 0 0 auto; /* Ensure cards do not shrink or grow */
+  width: 220px; /* Fixed width for each card */
+  height: 298.88px;
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.046);
   overflow: hidden;
-  width: 220px;
-  height: 298.88px;
   transition: transform 0.3s ease;
 }
 
 .activity-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05); 
 }
 
 .card-image {
@@ -848,6 +858,18 @@ transform: scale(4.1);
   color: var(--dark-gray);
   margin-top: 40px;
 }
+
+
+/* Animation Keyframes */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}
+
 
 
 /*************************************************************** 
