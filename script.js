@@ -42,72 +42,79 @@ window.addEventListener('scroll', handleScrollAnimation);
 document.addEventListener('DOMContentLoaded', function() {
     if (window.particlesJS) {
       particlesJS('particles-js', {
-        particles: {
-          number: {
-            value: 1000,
-            density: {
-              enable: true,
-              value_area: 800
+        "particles": {
+          "number": {
+            "value": 120, // Number of particles
+            "density": {
+              "enable": true,
+              "value_area": 800 // Area where particles are spread
             }
           },
-          shape: {
-               type: 'circle', // Replace 'text' with a built-in shape like 'circle'
+          "color": {
+            "value": "#ffffff" // Particle color
           },
-          color: {
-            value: '#000000'
-          },
-          opacity: {
-            value: 0.8,
-            random: true
-          },
-          size: {
-            value: 6,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 10,
-              size_min: 10,
-              sync: false
+          "shape": {
+            "type": "circle", // Shape of particles
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
             }
           },
-          line_linked: {
-            enable: false
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false
+            }
           },
-          move: {
-            enable: true,
-            speed: 3,
-            direction: 'none',
-            random: true,
-            straight: false,
-            out_mode: 'out',
-            bounce: false,
-            attract: {
-              enable: false
+          "size": {
+            "value": 5,
+            "random": true,
+            "anim": {
+              "enable": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150, // Distance for linking particles
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 6, // Speed of particle movement
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse" // Interaction on hover
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push" // Add particles on click
+            },
+            "resize": true
+          },
+          "modes": {
+            "repulse": {
+              "distance": 100,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
             }
           }
         },
-        interactivity: {
-          detect_on: 'canvas',
-          events: {
-            onhover: {
-              enable: true,
-              mode: 'repulse'
-            },
-            onclick: {
-              enable: true,
-              mode: 'push'
-            }
-          },
-          modes: {
-            repulse: {
-              distance: 100
-            },
-            push: {
-              particles_nb: 4
-            }
-          }
-        },
-        retina_detect: true
+        "retina_detect": true
       });
     } else {
       console.error('Particles.js library not loaded');

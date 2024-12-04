@@ -3,8 +3,7 @@
 ****************ROOT
 ***********************************/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --blue-color: #424DC1; 
     --yellow-color: #F2B705; 
@@ -12,7 +11,7 @@
     --dark-gray: #444444; 
     --black: #000000; 
     --white: #FFFFFF;
-    --font-family: "ADLaM Display", system-ui;
+    --font-family: "Poppins", sans-serif;
     --font-family2: "Inter", sans-serif;    
 }
 
@@ -81,122 +80,7 @@ header {
 .icons-section a {
     text-decoration: none;       
     color: var(--white);            
-    font-weight: bold;         
-}
-
-#Subscription-btn {
-  position: relative;
-  width: 120px;
-  height: 40px;
-  background-color: var(--white);
-  display: flex;
-  align-items: center;
-  color: var(--blue-color);
-  flex-direction: column;
-  justify-content: center;
-  border: none;
-  padding: 12px;
-  gap: 12px;
-  border-radius: 20px;
-  cursor: pointer;   
-  font-weight: 600;
-}
-
-#Subscription-btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: -4px;
-  top: -1px;
-  margin: auto;
-  width: 128px;
-  height: 48px;
-  border-radius: 20px;
-  background: linear-gradient(-45deg, #F2B705 20%, #424DC1 100% );
-  z-index: -10;
-  pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-#Subscription-btn::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(-45deg, #F2B705 20%, #424DC1 100% );
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(20px);
-}
-
-#Subscription-btn:hover::after {
-  filter: blur(30px);
-}
-
-#Subscription-btn:hover::before {
-  transform: rotate(-180deg);
-}
-
-#Subscription-btn:active::before {
-  scale: 0.7;
-}
-
-/* Scrolled state styles */
-header.scrolled {
-  background-color: var(--yellow-color);
-}
-
-header.scrolled .icons-section a {
-  color: var(--white-color);
-}
-
-header.scrolled #Subscription-btn {
-  background-color: var(--blue-color);
-  color: var(--white);
-}
-header {
-    position: absolute;
-    position: fixed;
-    z-index: 10;  
-    font-family: var(--font-family);
-    display: flex;               
-    justify-content: space-between;
-    align-items: center;         
-    padding: 10px 20px;
-    width: 90%;        
-    background-color: var(--blue-color);
-    margin-left: 5%;
-    border-radius: 0px 0px 20px 20px;
-}
-
-.logo-offpt {
-    max-height: 50px;
-    margin-right: 0;           
-}
-
-.logo-solicode {
-    max-height: 60px;
-    margin-left: -12%;            
-}
-
-.icons-section ul {
-    display: flex;               
-    list-style: none;            
-    margin: 0;
-    padding: 0;
-}
-
-.icons-section li {
-    margin: 0 15px;              
-}
-
-.icons-section li a:hover {
-  color: var(--yellow-color);
-}
-
-.icons-section a {
-    text-decoration: none;       
-    color: var(--white);            
-    font-weight: bold;         
+    font-weight: 600;         
 }
 
 #Subscription-btn {
@@ -269,12 +153,6 @@ header.scrolled #Subscription-btn {
   color: var(--white);
 }
 
-header.scrolled .logo-solicode {
-  width: 99px;
-  height: 100px;
-  margin-left: -12%;
-  padding: 0; 
-}
 /*************************************** 
 **************HERO SECTION
 ****************************************/
@@ -287,7 +165,7 @@ header.scrolled .logo-solicode {
     align-items: left; 
     text-align: left;
     color: var(--white);
-    height: 800px;
+    height: 612px;
 }
 
 .wave-line {   
@@ -555,12 +433,6 @@ transform: scale(4.1);
   object-fit: cover;
 }
 
-.experience-content h3 {
-  color: var(--white);
-  padding: 0;
-  line-height: 2.5;
-}
-
 .experience-content ul {
   list-style:none;
   padding: 5px 0 0 30px;
@@ -568,6 +440,7 @@ transform: scale(4.1);
 }
 
 .experience-content li {
+  font-family: var(--font-family);
   margin-bottom: 15px;
   line-height: 2.3;
 }
@@ -701,13 +574,13 @@ transform: scale(4.1);
 
 
 .about-programs h2 {
-  font-family: "ADLaM Display", system-ui;
+  font-family: var(--font-family);
   font-size: 36px;
   margin-bottom: 10px;
 }
 
 .about-programs p {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-weight: 200;
   font-size: 14px;
   margin-bottom: 40px;
@@ -739,7 +612,7 @@ transform: scale(4.1);
 
 .program-item h3 {
   display: flex;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-weight: 600;
   color: var(--yellow-color);
   justify-content: flex-start;
@@ -750,7 +623,7 @@ transform: scale(4.1);
 .program-item p {
   display: flex;
   justify-content: flex-start;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-weight: 600;
   font-size: 18px;
 }
@@ -785,7 +658,7 @@ transform: scale(4.1);
 }
 
 .section-title {
-  font-family: "ADLaM Display", system-ui;
+  font-family: var(--font-family);
   font-size: 35px;
   color: var(--black);
   margin-bottom: 50px;
@@ -827,7 +700,7 @@ transform: scale(4.1);
   display: flex;
   justify-content: flex-start;
   text-align: left;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-weight: 600;
   font-size: 14px;
   color: var(--black);
@@ -838,14 +711,14 @@ transform: scale(4.1);
   display: flex;
   justify-content: flex-start;
   text-align: left;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-size: 14px;
   color: var(--dark-gray);
   margin: 0;
 }
 
 .more-text {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-size: 16px;
   font-weight: 300;
   color: var(--dark-gray);
@@ -1084,7 +957,7 @@ iframe {
 .footer-copyright {
   background-color: var(--yellow-color);
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family2);
   font-weight: 700;
   color: var(--white);
   padding: 20px 0;
