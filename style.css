@@ -974,19 +974,13 @@ footer {
   margin-left: 5%;
   font-family: var(--font-family2);
   border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
 }
 
 .contact-button:hover {
   color: var(--blue-color); 
   transform: scale(1.05);
   background-color: var(--yellow-color);
-}
-
-.contact-button:focus {
-  outline: 2px solid var(--black);
-  outline-offset: 3px;
 }
 
 
