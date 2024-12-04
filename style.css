@@ -1,6 +1,6 @@
 
 /***********************************
-***********ROOT
+              ROOT
 ***********************************/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
@@ -60,7 +60,122 @@ header {
 
 .logo-solicode {
     max-height: 60px;
-    margin-left: -20%;            
+    margin-left: -12%;            
+}
+
+.icons-section ul {
+    display: flex;               
+    list-style: none;            
+    margin: 0;
+    padding: 0;
+}
+
+.icons-section li {
+    margin: 0 15px;              
+}
+
+.icons-section li a:hover {
+  color: var(--yellow-color);
+}
+
+.icons-section a {
+    text-decoration: none;       
+    color: var(--white);            
+    font-weight: bold;         
+}
+
+#Subscription-btn {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  color: var(--blue-color);
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 20px;
+  cursor: pointer;   
+  font-weight: 600;
+}
+
+#Subscription-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 20px;
+  background: linear-gradient(-45deg, #F2B705 20%, #424DC1 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#Subscription-btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #F2B705 20%, #424DC1 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+#Subscription-btn:hover::after {
+  filter: blur(30px);
+}
+
+#Subscription-btn:hover::before {
+  transform: rotate(-180deg);
+}
+
+#Subscription-btn:active::before {
+  scale: 0.7;
+}
+
+/* Scrolled state styles */
+header.scrolled {
+  background-color: var(--yellow-color);
+}
+
+header.scrolled .icons-section a {
+  color: var(--white-color);
+}
+
+header.scrolled #Subscription-btn {
+  background-color: var(--blue-color);
+  color: var(--white);
+}
+header {
+    position: absolute;
+    position: fixed;
+    z-index: 10;  
+    font-family: var(--font-family);
+    display: flex;               
+    justify-content: space-between;
+    align-items: center;         
+    padding: 10px 20px;
+    width: 90%;        
+    background-color: var(--blue-color);
+    margin-left: 5%;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.logo-offpt {
+    max-height: 50px;
+    margin-right: 0;           
+}
+
+.logo-solicode {
+    max-height: 60px;
+    margin-left: -12%;            
 }
 
 .icons-section ul {
@@ -154,6 +269,12 @@ header.scrolled #Subscription-btn {
   color: var(--white);
 }
 
+header.scrolled .logo-solicode {
+  width: 99px;
+  height: 100px;
+  margin-left: -12%;
+  padding: 0; 
+}
 /*************************************** 
 **************HERO SECTION
 ****************************************/
@@ -301,7 +422,6 @@ box-shadow: 0px 15px 15px 0px var(--black);
 .infos-card p {
 transition: all 0.3s ease;
 display: inline-block;
-font-
 }
 
 .infos-card p:hover {
@@ -859,15 +979,16 @@ footer {
 }
 
 .contact-button:hover {
-  color: var(--blue-color); /* Changes text color to blue on hover */
+  color: var(--blue-color); 
   transform: scale(1.05);
-  background-color: var(--yellow-color); /* Ensures background color stays the same */
+  background-color: var(--yellow-color);
 }
 
 .contact-button:focus {
   outline: 2px solid var(--black);
   outline-offset: 3px;
 }
+
 
 .footer-bottom {
   margin: 20px 0;
