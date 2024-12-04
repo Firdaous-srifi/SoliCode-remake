@@ -853,6 +853,10 @@ transform: scale(4.1);
 /*************************************************************** 
 ***************************FOOTER 
 ************************************************************************/
+
+/***********************************
+****************ROOT
+***********************************/
 footer {
   background-color: var(--black);
   color: var(--white);
@@ -902,12 +906,17 @@ footer {
   padding: 0;
   display: flex;
   gap: 25px;
+  transition: all 0.3s ease;
 }
 
+
 .footer-menu li a {
-  color: var(--white);
+  position: relative; 
+  z-index: 2;
+  color: white;
   text-decoration: none;
   font-size: 14px;
+  
 }
 
 .footer-menu li a:hover {
@@ -1037,6 +1046,8 @@ footer {
 }
 
 .contact-button {
+  position: relative; 
+  z-index: 2;
   background-color: var(--yellow-color);
   color: var(--white);
   z-index: 1;
@@ -1051,8 +1062,8 @@ footer {
 }
 
 .contact-button:hover {
-  color: var(--blue-color); /* Ensure text changes to blue */
-  background-color: var(--white); /* Contrast background */
+  background-color: var(--blue-color); /* Ensure text changes to blue */
+  color: var(--white); /* Contrast background */
   transform: scale(1.05); /* Slightly enlarges on hover */
 }
 .footer-bottom {
