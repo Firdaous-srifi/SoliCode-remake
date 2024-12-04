@@ -976,7 +976,6 @@ footer {
   border: none;
 
 }
-
 .contact-button:hover {
   color: var(--blue-color); 
   transform: scale(1.05);
