@@ -149,3 +149,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const videoThumbnail = document.getElementById('videoThumbnail');
+  const playButton = document.getElementById('playButton');
+  const videoModal = document.getElementById('videoModal');
+  const closeModal = document.getElementById('closeModal');
+  const youtubeVideo = document.getElementById('youtubeVideo');
+
+  const youtubeVideoId = '-Qu_DhpQmWU'; // Replace with your YouTube video ID
+
+  // Open modal when thumbnail or play button is clicked
+  function openModal() {
+      videoModal.style.display = 'flex';
+      youtubeVideo.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`;
+  }
+
+  // Close modal and stop video
+  function closeModalAndVideo() {
+      videoModal.style.display = 'none';
+      youtubeVideo.src = ''; // Clear the source to stop the video
+  }
+
+  // Event listeners
+  playButton.addEventListener('click', openModal);
+  videoThumbnail.addEventListener('click', openModal);
+  closeModal.addEventListener('click', closeModalAndVideo);
+
+  // Close modal if clicked outside of video
+  videoModal.addEventListener('click', (event) => {
+      if (event.target === videoModal) {
+          closeModalAndVideo();
+      }
+  });
+});

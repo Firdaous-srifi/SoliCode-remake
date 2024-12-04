@@ -41,7 +41,7 @@
         <div id="particles-js"></div>
           <div class="hero-content">
             <div class="c1">
-              <div class="type">Agé entre <span class="yellow">18</span> et 35ans ?</div>
+              <div class="type">Agé entre <span class="yellow">18</span> et <span class="yellow">35</span>ans ?</div>
           </div>
           </br>
           <div class="c2">
@@ -64,13 +64,29 @@
       <section id="solicode" class="container-infos">
         <h2>A Propos De Nous</h2>
         <div class="infos-content">
-          <div class="infos-image">
-            <iframe class="vid" width="560" height="315"
-              src="https://www.youtube.com/embed/-Qu_DhpQmWU?si=zQo9oZGsT-330Gm_" title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+            <div class="video-thumbnail" id="videoThumbnail">
+              <img src="imgs/solicode school.jpg" alt="Video Thumbnail">
+              <button class="play-button" id="playButton"></button>
+        </div>
+            <!-- Modal for video -->
+            <div id="videoModal" class="modal">
+                <span class="modal-close" id="closeModal">&times;</span>
+                <div class="modal-content">
+                    <div class="video-container">
+                        <iframe 
+                            id="youtubeVideo" 
+                            width="560" 
+                            height="315" 
+                            src="" 
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
           <div class="infos-card">
             <p><strong>I CODE , THEREFORE I AM ...</strong></p><br>
             <p><span class="blue">SOLI</span><span class="yellow">CODE</span> est un centre de formation solidaire et
