@@ -732,7 +732,7 @@ transform: scale(4.1);
 footer {
   background-color: var(--black);
   color: var(--white);
-  
+  font-family: var(--font-family);
 }
 
 .wave-footer{   
