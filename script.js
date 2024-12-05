@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Open modal when thumbnail or play button is clicked
   function openModal() {
       videoModal.style.display = 'flex';
-      youtubeVideo.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`;
+      youtubeVideo.src = `https://www.youtube.com/watch?v=-Qu_DhpQmWU&ab_channel=2MTV`;
   }
 
   // Close modal and stop video
