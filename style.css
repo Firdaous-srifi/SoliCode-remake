@@ -541,7 +541,7 @@ transform: scale(4.1);
 
 .cards {   
   display: flex;   
-  gap: 200px;    
+  gap: 200px; 
 }  
 
 .e-card {   
@@ -595,7 +595,8 @@ transform: scale(4.1);
   margin-top: 20px;
 }  
 
-.card:hover svg {   
+.card:hover img {
+  
   scale: 0; 
 }  
 
@@ -648,6 +649,26 @@ transform: scale(4.1);
   font-weight: 600; 
 }  
 
+.infotop-img  {
+  position: relative;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 auto;
+  width: 25%; 
+
+}
+
+.infotop-imgs {
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    width: 25%; 
+    height: auto; 
+  margin-bottom: -30px;
+}
 
 .wave:nth-child(2), .wave:nth-child(3) {   
   top: 210px; 
