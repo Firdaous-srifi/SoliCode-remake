@@ -21,7 +21,7 @@ html{
 }
 
 *{
-  max-width: 1200px;
+    max-width:1263px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -548,7 +548,8 @@ transform: scale(4.1);
   margin: 100px auto;   
   background: transparent;   
   box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);   
-  position: relative;   
+  position: relative; 
+  z-index: 0;  
   width: 240px;   
   height: 330px;   
   border-radius: 16px;   
@@ -584,11 +585,14 @@ transform: scale(4.1);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }  
 
-.card__title {   
+.card__title {  
+  font-family: var(--font-family); 
   margin: 0;   
   font-size: 24px;   
   color: var(--white);   
-  font-weight: 700; 
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }  
 
 .card:hover svg {   
@@ -596,12 +600,23 @@ transform: scale(4.1);
 }  
 
 .card__description {   
+  font-family: var(--font-family);
   margin: 10px 0 0;   
-  font-size: 14px;   
+  font-size: 15px;   
   color: var(--white);   
   line-height: 1.4; 
-  text-align: center;
-}    
+  text-align: left;
+}
+
+.card-img {
+  position: absolute; /* Position relative to its parent */
+  bottom: 0; /* Stick to the bottom */
+  left: 50%; /* Move to the horizontal center */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 20px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 30px; /* Add spacing if needed */
+}
 
 .wave {   
   position: absolute;   
@@ -621,7 +636,8 @@ transform: scale(4.1);
   padding-bottom: 1em; 
 }  
 
-.infotop {   
+.infotop {  
+  font-family: var(--font-family); 
   text-align: center;   
   font-size: 20px;   
   position: absolute;   
@@ -790,6 +806,7 @@ transform: scale(4.1);
   text-align: center;
   padding: 40px 20px;
   background-color: var(--white);
+  overflow: hidden;
 }
 
 .section-title {
@@ -801,24 +818,26 @@ transform: scale(4.1);
 }
 
 .slideshow-container {
-  width: 100%; /* Full width of the container */
-  overflow: hidden; /* Hide overflowing cards */
+  width: 100%; 
+  overflow: hidden; 
   position: relative;
+}
+
+.activities-wrapper {
+  display: flex;
+  width: 200%;
 }
 
 .activities-container {
   display: flex;
-  gap: 50px; 
-  animation: slideRight 20s linear infinite; 
-}
-
-.activities-container:hover {
-  animation-play-state: paused; /* Pause the animation when hovering */
+  animation: scroll 60s linear infinite;
+  width: 100%;
+  gap: 40px;
 }
 
 .activity-card {
-  flex: 0 0 auto; /* Ensure cards do not shrink or grow */
-  width: 220px; /* Fixed width for each card */
+  flex: 0 0 auto; 
+  width: 220px; 
   height: 298.88px;
   background-color: var(--white);
   border-radius: 10px;
@@ -871,47 +890,18 @@ transform: scale(4.1);
   margin-top: 40px;
 }
 
-
-/* Animation Keyframes */
-/* @keyframes slideRight {
+@keyframes scroll {
   0% {
-    transform: translateX(-100%); 
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(100%); 
-  }
-} */
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(0); /* Start at the initial position */
-  }
-  5% {
-    transform: translateX(0); /* Keep the first card in place briefly */
-  }
-  20% {
-    transform: translateX(-270px); /* Shift the first card out of view */
-  }
-  25% {
-    transform: translateX(-270px); /* Maintain the position briefly */
-  }
-  45% {
-    transform: translateX(-540px); /* Shift another card out */
-  }
-  50% {
-    transform: translateX(-540px); /* Hold for a moment */
-  }
-  70% {
-    transform: translateX(-810px); /* Keep shifting */
-  }
-  75% {
-    transform: translateX(-810px); /* Hold the last position */
-  }
-  100% {
-    transform: translateX(0); /* Bring everything back to the start */
+    transform: translateX(-50%);
   }
 }
 
+.activities-container:hover {
+  animation-play-state: paused;
+}
 /*************************************************************** 
 ***************************FOOTER 
 ************************************************************************/

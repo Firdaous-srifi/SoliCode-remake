@@ -191,3 +191,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
+
+
+function duplicateCards() {
+  const container = document.querySelector('.activities-container');
+  const cards = container.querySelectorAll('.activity-card');
+  
+  // Clone all cards
+  cards.forEach(card => {
+      const clonedCard = card.cloneNode(true);
+      container.appendChild(clonedCard);
+  });
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', duplicateCards);
+ 
