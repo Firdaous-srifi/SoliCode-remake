@@ -4,7 +4,7 @@ function animateCounters() {
     
     counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
-        const duration = 2000; // Total animation duration in ms
+        const duration = 3000; // Total animation duration in ms
         const increment = target / (duration / 16); // 16ms is roughly one frame at 60fps
         
         let currentCount = 0;
