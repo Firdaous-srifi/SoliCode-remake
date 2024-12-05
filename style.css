@@ -154,13 +154,20 @@ header.scrolled #Subscription-btn {
   color: var(--white);
 }
 
+
+header.scrolled .logo-solicode {
+  max-height: 120px;
+  margin-top: -2.5%;
+  margin-bottom: -3%; /* Set this to the same height as .logo-offpt */
+  margin-left: -12%; /* Keep the same margin if needed */
+}
 /*************************************** 
 **************HERO SECTION
 ****************************************/
 .hero {
     position: relative;
     height: 610px; 
-    background: url('imgs/heropic.jpeg') no-repeat center center/cover; 
+    background: url('imgs/solicode Photos/heropic.jpeg') no-repeat center center/cover; 
     display: flex;
     flex-direction: column; 
     align-items: left; 
@@ -170,7 +177,7 @@ header.scrolled #Subscription-btn {
 }
 
 .wave-line {   
-    background-image: url('imgs/9a4844b1-803c-4daf-883d-79c15d54b53c.svg');
+    background-image: url('imgs/waves/buttomsvg.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     width: 100vw;
@@ -340,38 +347,7 @@ header.scrolled #Subscription-btn {
   border-radius: 20px;
 }
 
-/* .play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background-color: var(--lightyellow-color);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out 0s;
 
-
-}
-
-
-.play-button:hover{
-  scale: 1.05;
-}
-
-.play-button::before {
-  content: '▶';
-  color: var(--yellow-color);
-  font-size: 30px;
-  margin-left: 10px;
-} */
-
-/* From Uiverse.io by vinodjangid07 */ 
 .Btn {
   position: absolute;
   top: 50%;
@@ -444,24 +420,6 @@ transition: all 0.3s ease;
 display: inline-block;
 font-family: var(--font-family2);
 }
-
-/* .infos-card p:hover {
-transform: scale(1.05);
-color: var(--blue-color);
-text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.infos-card p:hover {
-text-decoration: underline;
-text-decoration-color: var(--yellow-color); 
-} */
-
-/* .infos-card p strong:hover,
-.infos-card p span:hover {
-color: var(--black-color); 
-transform: scale(4.1);
-} */
-
 
 
 /****************************************************************** 
@@ -550,7 +508,7 @@ transform: scale(4.1);
   box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);   
   position: relative; 
   z-index: 0;  
-  width: 240px;   
+  width: 280px;   
   height: 330px;   
   border-radius: 16px;   
   overflow: hidden;   
@@ -610,13 +568,13 @@ transform: scale(4.1);
 }
 
 .card-img {
-  position: absolute; /* Position relative to its parent */
-  bottom: 0; /* Stick to the bottom */
-  left: 50%; /* Move to the horizontal center */
-  transform: translateX(-50%); /* Adjust for centering */
-  width: 20px; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 30px; /* Add spacing if needed */
+  position: absolute; 
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 20px; 
+  height: auto; 
+  margin-bottom: 30px; 
 }
 
 .wave {   
@@ -730,7 +688,7 @@ transform: scale(4.1);
   width: 110%;
   height: 60%;
   background-size: cover;
-  background: url('imgs/topsvg.svg') no-repeat center top; /* Path to your wave SVG */
+  background: url('imgs/waves/topsvg.svg') no-repeat center top; /* Path to your wave SVG */
 }
 
 .about-programs .content {
@@ -813,7 +771,7 @@ transform: scale(4.1);
   left: 0;
   width: 100%;
   height: 20%;
-  background: url('imgs/buttomsvg.svg') no-repeat center center;
+  background: url('imgs/waves/buttomsvg.svg') no-repeat center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -903,13 +861,13 @@ transform: scale(4.1);
   margin: 0;
 }
 
-.more-text {
+/* .more-text {
   font-family: var(--font-family2);
   font-size: 16px;
   font-weight: 300;
   color: var(--dark-gray);
   margin-top: 40px;
-}
+} */
 
 @keyframes scroll {
   0% {
@@ -937,7 +895,7 @@ footer {
 }
 
 .wave-footer{   
-  background-image: url('imgs/foot-wave.svg');
+  background-image: url('imgs/footer/foot-wave.svg');
   background-repeat: no-repeat;
   background-position: top;
   margin-top: -1%;
